@@ -6,6 +6,7 @@ struct Vptr {
 };
 struct Vptr * Vptr_create(double (*area)(struct Shape * self), double (*perimeter)(struct Shape * self)) {
     struct Vptr * s = (struct Vptr *)malloc(sizeof(struct Vptr));
+    
     s->area = area;
     s->perimeter = perimeter;
 }
